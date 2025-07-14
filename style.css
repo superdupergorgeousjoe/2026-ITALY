@@ -1,19 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+/* reset & base */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Noto Sans KR",Helvetica,Arial,sans-serif;
+     background:#f7f7f7;color:#222;line-height:1.6}
 
-body { 
-    font-family: 'Gowun Dodum', sans-serif; 
-}
+/* header / footer */
+header,footer{
+  background:#015E3B;color:#fff;text-align:center;
+  padding:24px 16px;margin-bottom:24px}
+header h1{margin-bottom:6px}
 
-.accordion-content { 
-    max-height: 0; 
-    overflow: hidden; 
-    transition: max-height 0.5s ease-out; 
-}
+/* layout */
+main{max-width:1000px;margin:0 auto 60px;padding:0 12px}
 
-.accordion-content.open { 
-    max-height: 2000px; 
-}
+/* day-block */
+.day-block{background:#fff;margin-bottom:40px;border-radius:8px;
+           box-shadow:0 2px 6px rgba(0,0,0,.08);overflow:hidden}
+.day-block h2{background:#fafafa;padding:14px 16px;
+              border-left:6px solid #015E3B;font-size:1.25rem}
 
-.timeline-item:last-child .timeline-line { 
-    display: none; 
+/* prep box */
+.prep-box{background:#fff7e6;border-left:6px solid #ffb300;
+          padding:10px 14px;margin:0 0 12px}
+.prep-box ul{margin-left:18px}
+
+/* table */
+.schedule-table{width:100%;border-collapse:collapse}
+.schedule-table th,.schedule-table td{
+  border:1px solid #ddd;padding:8px 6px;vertical-align:top;text-align:left}
+.schedule-table thead th{background:#f0f0f0}
+.day-total{padding:10px 16px;font-weight:600;color:#007700}
+
+/* links */
+a{color:#015E3B;text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* mobile */
+@media(max-width:600px){
+  .schedule-table th:nth-child(3),
+  .schedule-table td:nth-child(3){display:none} /* 비용 열 숨김 */
 }
